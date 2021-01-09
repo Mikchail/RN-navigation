@@ -5,6 +5,7 @@ import { Center } from './style';
 import { Text } from 'react-native';
 import { HomeStack } from './HomeStack';
 import { SearchStackComponent } from './SearchStack';
+import { MapScreen } from './ScreenForMap/MapScreen';
 interface AppTabsProps {}
 
 
@@ -33,6 +34,7 @@ export class AppTabs extends Component<AppTabsProps, {}> {
       <Tabs.Navigator>
         <Tabs.Screen name='Home' component={HomeStack}/>
         <Tabs.Screen name="Search" component={SearchStackComponent} />
+        <Tabs.Screen name="MapScreen" component={MapScreen} />
       </Tabs.Navigator>
     );
   }

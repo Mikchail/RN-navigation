@@ -47,12 +47,11 @@ export const HomeStack: React.FC<HomeStackProps> = () => {
     <HomeStackNav.Navigator initialRouteName="Feed">
       <HomeStackNav.Screen
         options={{
-          headerLeftContainerStyle: {
-            paddingLeft: 20,
+          headerRightContainerStyle: {
             marginRight: 20,
             width: '100%',
           },
-          headerLeft: () => {
+          headerRight: () => {
             return (
               <TouchableOpacity>
                 <Button title="logout" onPress={() => Alert.alert('alert')} />

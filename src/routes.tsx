@@ -7,17 +7,18 @@ import {AuthNavProps, AuthParamsList} from './AuthParamsList';
 import {AuthContext} from './AuthProvider';
 import {AppTabs} from './AppTabs';
 import {AuthStack} from './AuthStack';
+import {MainDrawer} from './MainDrawer';
 
 interface RoutesProps {}
 
 export class Router extends Component<RoutesProps, {}, {}> {
-  static contextType = AuthContext;
+  public static contextType = AuthContext;
   public render() {
     const {user} = this.context;
     console.log(this.context);
     return (
       <NavigationContainer>
-        {user ? <AppTabs /> : <AuthStack />}
+        {user ? <MainDrawer /> : <AuthStack />}
       </NavigationContainer>
     );
   }

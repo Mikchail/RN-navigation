@@ -59,12 +59,11 @@ export const SearchStackComponent: React.FC<HomeStackProps> = () => {
     <SearchStack.Navigator initialRouteName="Search">
       <SearchStack.Screen
         options={{
-          headerLeftContainerStyle: {
-            paddingLeft: 20,
+          headerRightContainerStyle: {
             marginRight: 20,
             width: '100%',
           },
-          headerLeft: () => {
+          headerRight: () => {
             return (
               <TouchableOpacity>
                 <Button title="logout" onPress={() => Alert.alert('alert')} />
